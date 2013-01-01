@@ -1,0 +1,146 @@
+* {  
+  font-family: 'Monda', 'Marvel', 'Raleway', 'Fjalla One', Helvetica, sans-serif;
+  margin: 0;  
+  padding: 0;  
+} 
+
+body, html {
+	background: #141111;
+	font-size: 9px;
+	width: 100%;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #ffffff;
+	font-size: 4.2em;
+}
+
+h2 {
+	margin: 0.8em;
+	font-size: 2em;
+}
+
+form {
+	margin-top: 1em;
+	width: 100%;
+	text-align: center;
+}
+
+form input[type="text"] {
+	width: 17em;
+	font-size: 2em;
+	border-radius: 0.4em;
+	background: #ffffff;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	border: 0.15em solid #C1DAD6;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	-webkit-transition: box-shadow 0.2s, border 0.2s; /* Safari and Chrome */
+}
+
+form input[type="text"]:focus {
+	border: 0.15em solid #ffcc00;
+	-webkit-box-shadow: 0px 0px 4px 4px rgba(255, 200, 0, 0.3), inset 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 4px 4px rgba(255, 200, 0, 0.3), inset 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+	outline: none;
+}
+
+form input[type="text"]:hover {
+	border: 0.15em solid #ffcc00;
+}
+
+form input[type="submit"]:hover {
+	border: 0.15em solid #ffcc00;
+	-webkit-box-shadow: 0px 0px 4px 4px rgba(255, 200, 0, 0.3);
+	box-shadow: 0px 0px 4px 4px rgba(255, 200, 0, 0.3);
+	outline: none;
+}
+
+form input[type="submit"] {
+	margin: 1em 0 1em 0;
+	width: 10em;
+	border-radius: 1em;
+	background: #ffffff;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	border: 0.15em solid #C1DAD6;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	font-size: 2em;
+	-webkit-transition: box-shadow 0.2s, border 0.2s; /* Safari and Chrome */
+}
+
+.search-results {
+	width: 100%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.item {
+	color: #403939;
+}
+
+a {
+	color: #AD235E;
+}
+
+.odd {
+	background: #dbdbdb;
+}
+
+.even {
+	background: #aba6a6;
+}
+
+table {
+	table-layout: fixed;
+}
+
+table, table tr {
+	width: 100%;
+}
+
+.item td {
+	padding: 0.5em 1em 0.5em 1em;
+	font-size: 1.6em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.center {
+	text-align: center;
+}
+
+.header-bar {
+	/*position: fixed;*/
+	height: 2.5em;
+	line-height: 2.5em;
+	background: rgba(0,0,0,0.9);
+	width: 100%;
+	list-style-type: none;
+}
+
+.header-bar li {
+	padding-left: 2em;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.container {
+	padding-top: 2.5em;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr:hover {
+	opacity: 0.9;
+}
+
+a img {
+	-webkit-filter: grayscale(100%);
+}
+
+ul li {
+	float: left;
+}

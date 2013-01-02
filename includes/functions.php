@@ -4,7 +4,6 @@ include('config.php');
 
 function showResults($data)
 {
-
 		echo '<table>';
 
 		$c = 0;

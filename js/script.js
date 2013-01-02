@@ -5,7 +5,16 @@ $(document).ready(function(){
 		clicked = $(this);
 
 		$.get( $(this).attr('href'), function(data){
-			$(clicked).css({'-webkit-filter':'brightness(-20%)'});
+
+			if (data.indexOf("ok") !== -1)
+			{
+				$(clicked).css({'-webkit-filter':'brightness(-20%)'});
+			}
+			else
+			{
+				alert(data);
+			}
+			
 		});
 	});
 });

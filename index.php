@@ -23,6 +23,7 @@ $config = config();
 
 		// go!
 		toSab($_REQUEST['url']);
+		die();
 	}
 
 	// have we searched?

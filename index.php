@@ -30,16 +30,30 @@ $config = config();
 	{
 		// get search results JSON
 		$search = str_replace( array(' '), array('+'), $_REQUEST['search'] );
-		$data = json_decode( file_get_contents( 'http://beta.nzbs.org/api?t=search&q='.$search.'&apikey='.$config['nzbsApiKey'].'&o=json' ) );
+		$contents = file_get_contents( 'http://beta.nzbs.org/api?t=search&q='.$search.'&apikey='.$config['nzbsApiKey'].'&o=json' );
+		
+		if (substr($contents, 0, 5) == '<?xml'){
+			echo 'nzbs.org API key error..';
+			die();
+		}
+		
+		$data = json_decode( $contents );
 	}
 
 	// selected a category?
 	else if ( isset( $_REQUEST['showcat'] ) )
 	{
 		// get custom category results JSON
+		$contents = file_get_contents ( 'http://beta.nzbs.org/api?t=search&apikey='.$config['nzbsApiKey'].'&o=json&cat='.$cats );
+		
+		if (substr($contents, 0, 5) == '<?xml'){
+			echo 'nzbs.org API key error..';
+			die();
+		}
+
 		$cats = $config['categories'][$_REQUEST['showcat']];
 
-		$data = json_decode( file_get_contents ( 'http://beta.nzbs.org/api?t=search&apikey='.$config['nzbsApiKey'].'&o=json&cat='.$cats ) );
+		$data = json_decode( $contents );
 	}
 
 ?>
